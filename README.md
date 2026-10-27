@@ -40,11 +40,9 @@
 
 
 
-\## 🏗️ Architecture de la formation
-
-
-
 ## 🏗️ Architecture de la formation
+
+
 
 ```mermaid
 flowchart LR
@@ -52,6 +50,7 @@ flowchart LR
     C["Code Colab<br/>Publisher"] -->|MQTT| D["HiveMQ Broker"]
     D --> E["Code Colab<br/>Subscriber"]
     E -->|Stockage| F["InfluxDB"]
+
 
 
 
