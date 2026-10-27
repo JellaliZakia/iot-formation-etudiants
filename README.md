@@ -44,27 +44,14 @@
 
 
 
+## 🏗️ Architecture de la formation
+
 ```mermaid
-
 flowchart LR
-
-&#x20;   A\[Code Colab<br/>Publisher] -->|HTTP| B\[ThingSpeak<br/>Visualisation + Fuzzy Logic]
-
-&#x20;   
-
-&#x20;   C\[Code Colab<br/>Publisher] -->|MQTT| D\[HiveMQ Broker]
-
-&#x20;   D --> E\[Code Colab<br/>Subscriber]
-
-&#x20;   E -->|Stockage| F\[InfluxDB]
-
-
-
-
-
-
-
-\---
+    A["Code Colab<br/>Publisher"] -->|HTTP| B["ThingSpeak<br/>Visualisation + Fuzzy Logic"]
+    C["Code Colab<br/>Publisher"] -->|MQTT| D["HiveMQ Broker"]
+    D --> E["Code Colab<br/>Subscriber"]
+    E -->|Stockage| F["InfluxDB"]
 
 
 
