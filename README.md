@@ -1,36 +1,152 @@
-﻿# Formation IoT pour Étudiants
+﻿\# 📡 Formation IoT pour Étudiants
 
-Monitoring de données simulées (Température & Humidité) avec HTTP + MQTT
 
-## Objectifs pédagogiques
 
-- Comprendre les protocoles HTTP et MQTT
-- Envoyer des données simulées vers ThingSpeak
-- Visualiser les données en temps réel
-- Appliquer de la logique floue via MATLAB Analysis
-- Utiliser un broker MQTT public (HiveMQ)
-- Stocker les données dans InfluxDB
+\### Monitoring de données simulées (Température \& Humidité) avec \*\*HTTP\*\* + \*\*MQTT\*\*
 
-## Structure du projet
 
-| Dossier | Contenu |
-|---------|---------|
-| 01-http-thingspeak | Publication HTTP vers ThingSpeak |
-| 02-matlab-analysis-fuzzy | Logique floue (MATLAB Analysis) |
-| 03-mqtt-hivemq-publisher | Publication MQTT vers HiveMQ |
-| 04-mqtt-subscriber-influxdb | Abonnement MQTT + InfluxDB |
-| docs | Documentation |
 
-## Prérequis
+!\[GitHub repo size](https://img.shields.io/github/repo-size/JellaliZakia/iot-formation-etudiants)
 
-- Compte Google (Colab)
-- Compte ThingSpeak (gratuit)
-- Compte InfluxDB Cloud (gratuit)
-- Broker HiveMQ : broker.hivemq.com (port 1883)
+!\[GitHub last commit](https://img.shields.io/github/last-commit/JellaliZakia/iot-formation-etudiants)
 
-## Ordre de la formation
+!\[License](https://img.shields.io/badge/license-MIT-blue)
 
-1. Partie 1  HTTP + ThingSpeak
-2. Partie 2  Logique floue
-3. Partie 3  MQTT Publisher
-4. Partie 4  MQTT Subscriber + InfluxDB
+
+
+\---
+
+
+
+\## 🎯 Objectifs pédagogiques
+
+
+
+\- Comprendre les protocoles \*\*HTTP\*\* et \*\*MQTT\*\*
+
+\- Envoyer des données simulées (température \& humidité) vers \*\*ThingSpeak\*\*
+
+\- Visualiser les données en temps réel
+
+\- Appliquer de la \*\*logique floue\*\* via MATLAB Analysis
+
+\- Utiliser un broker MQTT public (\*\*HiveMQ\*\*)
+
+\- Stocker les données dans \*\*InfluxDB\*\*
+
+
+
+\---
+
+
+
+\## 🏗️ Architecture de la formation
+
+
+
+```mermaid
+
+flowchart LR
+
+&#x20;   A\[Code Colab<br/>Publisher] -->|HTTP| B\[ThingSpeak<br/>Visualisation + Fuzzy Logic]
+
+&#x20;   
+
+&#x20;   C\[Code Colab<br/>Publisher] -->|MQTT| D\[HiveMQ Broker]
+
+&#x20;   D --> E\[Code Colab<br/>Subscriber]
+
+&#x20;   E -->|Stockage| F\[InfluxDB]
+
+
+
+
+
+
+
+\---
+
+
+
+\## 📁 Structure du projet
+
+
+
+| Dossier | Description |
+
+|---------|-------------|
+
+| `01-http-thingspeak` | Publication des données via \*\*HTTP\*\* vers ThingSpeak |
+
+| `02-matlab-analysis-fuzzy` | Code \*\*MATLAB Analysis\*\* (logique floue) |
+
+| `03-mqtt-hivemq-publisher` | Publication des données via \*\*MQTT\*\* vers HiveMQ |
+
+| `04-mqtt-subscriber-influxdb` | Abonnement MQTT + stockage dans \*\*InfluxDB\*\* |
+
+| `docs` | Documentation complémentaire |
+
+
+
+\---
+
+
+
+\## ⚙️ Prérequis
+
+
+
+\- Compte Google (pour Google Colab)
+
+\- Compte gratuit \[ThingSpeak](https://thingspeak.com)
+
+\- Compte gratuit \[InfluxDB Cloud](https://cloud2.influxdata.com)
+
+\- Broker public HiveMQ : `broker.hivemq.com` (port 1883)
+
+
+
+\---
+
+
+
+\## 🚀 Ordre recommandé de la formation
+
+
+
+1\. \*\*Partie 1\*\* → HTTP + ThingSpeak  
+
+&#x20;  `01-http-thingspeak/`
+
+
+
+2\. \*\*Partie 2\*\* → Logique floue  
+
+&#x20;  `02-matlab-analysis-fuzzy/`
+
+
+
+3\. \*\*Partie 3\*\* → MQTT Publisher  
+
+&#x20;  `03-mqtt-hivemq-publisher/`
+
+
+
+4\. \*\*Partie 4\*\* → MQTT Subscriber + InfluxDB  
+
+&#x20;  `04-mqtt-subscriber-influxdb/`
+
+
+
+\---
+
+
+
+\## 👩‍💻 Auteur
+
+
+
+Formation préparée pour les étudiants — 2025/2026  
+
+\*\*Jellali Zakia\*\*
+
