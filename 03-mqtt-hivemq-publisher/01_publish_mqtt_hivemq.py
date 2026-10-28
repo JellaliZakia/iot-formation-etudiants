@@ -1,14 +1,14 @@
+# !pip install paho-mqtt
+
 import json
 import random
 import time
 import paho.mqtt.client as mqtt
 
-#!pip install paho-mqtt
-
 # 1. Configuration du Broker HiveMQ (ici le broker public de test)
 BROKER_HOST ="broker.hivemq.com"
 BROKER_PORT = 1883
-TOPIC = "formation/IoT/fst"
+TOPIC = "xxxxxxxxxxxxxxxxxxxxxxxx"
 
 # Callback exécuté lors de la connexion
 def on_connect(client, userdata, flags, rc, properties=None):
@@ -36,7 +36,7 @@ try:
     print(f"Publication des données sur le topic '{TOPIC}' (Appuyez sur Stop dans Colab pour arrêter)...\n")
     
     # Simulation en continu (par exemple, 10 mesures espacées de 3 secondes)
-    for i in range(1, 11):
+    for i in range(1, 1000):
         # Simulation de valeurs aléatoires
         temperature = round(random.uniform(20.0, 30.0), 2)  # Entre 20°C et 30°C
         humidity = round(random.uniform(40.0, 70.0), 1)     # Entre 40% et 70%
